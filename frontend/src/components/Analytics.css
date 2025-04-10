@@ -1,0 +1,73 @@
+/* Analytics.css */
+.analytics h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .analytics-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .chart-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .chart-container h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .chart-container.wide {
+    grid-column: 1 / -1;
+  }
+  
+  .top-law-firms {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .top-law-firms h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .law-firms-table-container {
+    overflow-x: auto;
+  }
+  
+  .law-firms-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .law-firms-table th,
+  .law-firms-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .law-firms-table th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .law-firms-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .law-firms-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

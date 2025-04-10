@@ -1,0 +1,105 @@
+/* MotionDetail.css */
+.motion-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .motion-detail-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .motion-detail-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .motion-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .motion-detail-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+  }
+  
+  .motion-detail-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .info-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #555;
+  }
+  
+  .parties-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .party-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .party-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .party-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .attorneys-list h5 {
+    color: #555;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .attorneys-list ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
+  
+  .attorneys-list li {
+    margin-bottom: 0.3rem;
+  }
+  
+  .summary-content,
+  .order-description-content {
+    line-height: 1.8;
+  }
+  

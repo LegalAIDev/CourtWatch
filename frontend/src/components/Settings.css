@@ -1,0 +1,98 @@
+/* Settings.css */
+.settings h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--danger-color);
+    padding: 1rem;
+    border-left: 4px solid var(--danger-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .success-message {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--success-color);
+    padding: 1rem;
+    border-left: 4px solid var(--success-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .settings-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+  }
+  
+  .settings-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .settings-form {
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .form-group.checkbox {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-group.checkbox input {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .form-group.checkbox label {
+    margin-bottom: 0;
+  }
+  
+  .form-actions {
+    margin-top: 2rem;
+  }
+  
+  .save-button {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #219653;
+  }
+  
+  .save-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
