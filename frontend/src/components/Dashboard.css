@@ -1,0 +1,411 @@
+/* Dashboard.css */
+.dashboard h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+  
+  .stat-card h3 {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .dashboard-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .chart-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .chart-container h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  .recent-motions h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .motions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .motion-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .motion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .motion-header h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-right: 1rem;
+  }
+  
+  .motion-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  .motion-body {
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .motion-body p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .motion-summary {
+    color: #555;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+  
+  .motion-footer {
+    margin-top: auto;
+  }
+  
+  .view-details {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+  }
+  
+  .view-details:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .view-all {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .view-all-link {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+  }
+  
+  .view-all-link:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* MotionList.css */
+  .motion-list-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .filters {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+  }
+  
+  .filters h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    margin-bottom: 1rem;
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .filter-group input,
+  .filter-group select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .reset-filters {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-filters:hover {
+    background-color: #95a5a6;
+  }
+  
+  .motion-table-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .motion-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .motion-table th,
+  .motion-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .motion-table th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .motion-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .motion-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .view-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .view-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #ecf0f1;
+  }
+  
+  .pagination button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 0.5rem;
+  }
+  
+  .pagination button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .pagination button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .page-info {
+    margin: 0 1rem;
+  }
+  
+  .no-results {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  
+  /* MotionDetail.css */
+  .motion-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .motion-detail-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .motion-detail-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .motion-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .motion-detail-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+  }
+  
+  .motion-detail-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .info-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #555;
+  }
+  
+  .parties-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .party-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .party-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .party-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .attorneys-list h5 {
+    color: #555;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .attorneys-list ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
+  
+  .attorneys-list li {
+    margin-bottom: 0.3rem;
+  }
+  
+  .summary-content,
+  .order-description-content {
+    line-height: 1.8;
+  }
+  
