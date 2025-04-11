@@ -11,7 +11,7 @@ import './App.css';
 
 // Use relative URLs for API requests
 // This will work with the Netlify proxy configuration
-const API_URL = 'https://cors-anywhere.herokuapp.com/https://courtwatch-9dd3b16cc62c.herokuapp.com/api';
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);

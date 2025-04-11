@@ -14,8 +14,21 @@ load_dotenv()
 # Initialize Flask app
 app = Flask(__name__)
 
-# Get allowed origins from environment variable or use a default
-CORS(app, origins="https://courtwatchai.netlify.app", supports_credentials=True)
+# Add CORS headers to all responses
+@app.after_request
+def add_cors_headers(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://courtwatchai.netlify.app')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    return response
+
+# Handle OPTIONS requests
+@app.route('/', defaults={'path': ''}, methods=['OPTIONS'])
+@app.route('/<path:path>', methods=['OPTIONS'])
+def options_handler(path):
+    return app.make_default_options_response()
+    
 
 # Initialize database connection
 db = Database()
