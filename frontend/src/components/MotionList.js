@@ -151,3 +151,79 @@ function MotionList({ apiUrl }) {
               value={filters.endDate}
               onChange={handleFilterChange}
             />
+          </div>
+        </div>
+        
+        <div className="filter-actions">
+          <button
+            onClick={handleResetFilters}
+            className="reset-filters"
+          >
+            Reset Filters
+          </button>
+        </div>
+      </div>
+      
+      {error && <div className="error">Error: {error}</div>}
+      
+      {motions.length > 0 ? (
+        <div className="motion-table-container">
+          <table className="motion-table">
+            <thead>
+              <tr>
+                <th>Case Name</th>
+                <th>Court</th>
+                <th>Judge</th>
+                <th>Motion Type</th>
+                <th>Order Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {motions.map(motion => (
+                <tr key={motion.id}>
+                  <td>{motion.case_name}</td>
+                  <td>{motion.court}</td>
+                  <td>{motion.judge}</td>
+                  <td>{motion.motion_type}</td>
+                  <td>{motion.order_info?.date || 'Unknown'}</td>
+                  <td>
+                    <Link to={`/motions/${motion.id}`} className="view-button">
+                      View
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          
+          <div className="pagination">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            
+            <span className="page-info">
+              Page {currentPage} of {totalPages}
+            </span>
+            
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="no-results">
+          No motions found matching your criteria
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default MotionList;
