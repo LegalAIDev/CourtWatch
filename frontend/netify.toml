@@ -1,21 +1,13 @@
-[
-build
-]
+[build]
   publish = "build"
   command = "npm run build"
 
-# Redirect all page requests to index.html for SPA routing
-[[
-redirects
-]]
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Proxy API requests to Heroku backend
-[[
-redirects
-]]
+[[redirects]]
   from = "/api/*"
   to = "https://courtwatch-9dd3b16cc62c.herokuapp.com/api/:splat"
   status = 200
