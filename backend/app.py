@@ -15,8 +15,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Get allowed origins from environment variable or use a default
-allowed_origins = os.getenv('ALLOWED_ORIGINS', 'https://courtwatchai.netlify.app,http://localhost:3000').split(',')
-CORS(app, resources={r"/api/*": {"origins": allowed_origins}})
+CORS(app, origins="https://courtwatchai.netlify.app", supports_credentials=True)
 
 # Initialize database connection
 db = Database()
