@@ -4,7 +4,7 @@ A proprietary AI tool for law firms to track denied motions to dismiss and summa
 
 ## Overview
 
-This application connects to legal research APIs (Docket Alarm or LexisNexis), pulls court orders that deny motions to dismiss or summary judgment, and presents them in an organized dashboard. The system includes AI-generated summaries of court orders to provide quick insights.
+This application connects to the Lex Machina API, pulls court orders that deny motions to dismiss or summary judgment, and presents them in an organized dashboard. The system includes AI-generated summaries of court orders to provide quick insights.
 
 ## Features
 
@@ -19,7 +19,7 @@ This application connects to legal research APIs (Docket Alarm or LexisNexis), p
 The application uses a modern architecture with these components:
 
 1. **Backend API (Python/Flask)**
-   - Connects to Docket Alarm/Lexis API
+   - Connects to Lex Machina API
    - Processes and filters court orders
    - Generates AI summaries using OpenAI API
    - Provides REST endpoints for the frontend
@@ -41,7 +41,7 @@ The application uses a modern architecture with these components:
 
 - Python 3.8+
 - Node.js 16+
-- Docket Alarm or LexisNexis API credentials
+- Lex Machina API credentials (Client ID and Client Secret)
 - OpenAI API key (for AI summaries)
 
 ### Backend Setup
@@ -59,8 +59,8 @@ The application uses a modern architecture with these components:
 
 3. Create a `.env` file with your API credentials:
    ```
-   DOCKET_ALARM_USERNAME=your_username
-   DOCKET_ALARM_PASSWORD=your_password
+   LEX_MACHINA_CLIENT_ID=your_client_id
+   LEX_MACHINA_CLIENT_SECRET=your_client_secret
    OPENAI_API_KEY=your_openai_key
    ```
 
@@ -105,7 +105,7 @@ The application uses a modern architecture with these components:
 
 The system is designed to be flexible and can be customized in these ways:
 
-1. **Alternative Data Sources**: Switch between Docket Alarm and LexisNexis APIs
+1. **Alternative Data Sources**: Configured to use Lex Machina API
 2. **Additional Motion Types**: Expand to track other motion types
 3. **Custom AI Models**: Use different AI models for summarization
 4. **Enterprise Integration**: Connect to law firm document management systems

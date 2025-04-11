@@ -5,8 +5,8 @@ import './Settings.css';
 
 function Settings({ apiUrl }) {
   const [apiSettings, setApiSettings] = useState({
-    docketAlarmUsername: '',
-    docketAlarmPassword: '',
+    lexMachinaClientId: '',
+    lexMachinaClientSecret: '',
     openaiApiKey: ''
   });
   
@@ -89,26 +89,28 @@ function Settings({ apiUrl }) {
         <h3>API Configuration</h3>
         <form onSubmit={handleApiSubmit} className="settings-form">
           <div className="form-group">
-            <label htmlFor="docketAlarmUsername">Docket Alarm Username</label>
+            <label htmlFor="lexMachinaClientId">Lex Machina Client ID</label>
             <input
               type="text"
-              id="docketAlarmUsername"
-              name="docketAlarmUsername"
-              value={apiSettings.docketAlarmUsername}
+              id="lexMachinaClientId"
+              name="lexMachinaClientId"
+              value={apiSettings.lexMachinaClientId}
               onChange={handleApiChange}
               required
+              placeholder="Enter your Lex Machina Client ID"
             />
           </div>
           
           <div className="form-group">
-            <label htmlFor="docketAlarmPassword">Docket Alarm Password</label>
+            <label htmlFor="lexMachinaClientSecret">Lex Machina Client Secret</label>
             <input
               type="password"
-              id="docketAlarmPassword"
-              name="docketAlarmPassword"
-              value={apiSettings.docketAlarmPassword}
+              id="lexMachinaClientSecret"
+              name="lexMachinaClientSecret"
+              value={apiSettings.lexMachinaClientSecret}
               onChange={handleApiChange}
               required
+              placeholder="Enter your Lex Machina Client Secret"
             />
           </div>
           
@@ -121,6 +123,7 @@ function Settings({ apiUrl }) {
               value={apiSettings.openaiApiKey}
               onChange={handleApiChange}
               required
+              placeholder="Enter your OpenAI API Key"
             />
           </div>
           

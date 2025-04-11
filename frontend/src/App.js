@@ -9,7 +9,9 @@ import Analytics from './components/Analytics';
 import Settings from './components/Settings';
 import './App.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// Use relative URLs for API requests
+// This will work with the Netlify proxy configuration
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
